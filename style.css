@@ -181,8 +181,8 @@ header .navbar ul li a.active::before{
 
 /*Home Section*/
 .home{
-	min-height: 50vh;	
-	background-image: url("images/hero/cover.jpg");
+	min-height: 80vh;	
+	background-image: url("images/hero/header.jpg");
 	background-size:cover;
 	background-position: center;
 	padding:15px;
@@ -190,7 +190,7 @@ header .navbar ul li a.active::before{
 }
 
 .home .full-screen{
-	min-height: 90vh;
+	min-height: 70vh;
 	
 }
 .home .home-content{
@@ -232,7 +232,9 @@ header .navbar ul li a.active::before{
 }
 .home .home-content .block .cv-btn{
 	padding-top:20px;
+	font-family: "montserrat";
 }
+
 .home .home-content .block .cv-btn a{
 	border-radius:4px;
 	color:#ffffff;
@@ -260,7 +262,7 @@ header .navbar ul li a.active::before{
 
 .timeline .section-title h1{
 
-	color: cornflowerblue;
+	color: darkslategrey;
 	text-align: center;
 	font-size: 20px;
 }
@@ -350,25 +352,28 @@ font-size: 5px;
 	}
 .timeline .row .time .time-item::before{
 	content: '';
-	width: 2px;
+	width: 3px;
 	position: absolute;
 	height: 100%;
 	left: 0;
-	background-color:rgb(189, 179, 230);
+	background-color:rgb(190, 182, 231);
 	top: 0;
 
 
 }
 .timeline .row .circle-dot{
-	background-color:rgb(161, 144, 230);
+	content: '';
+	/* background-color:#000; */
+	display: block;
+	border: 3px solid rgb(74, 78, 90);
 	left: 0;
 	position: absolute;
-	left: -6.5px;
+	left: -6.4px;
 	top: 2px;
 	height: 12px;
 	
 	width: 15px;
-	border-radius: 60%;
+	border-radius:unset;
 }
 .timeline .row .time-date{
 
@@ -404,12 +409,13 @@ font-size: 5px;
 /* timeline end here */
 /* message text*/
 .message-text{
-	background-color: #6c6cff;
+	background-color: darkslategrey;
     padding:40px 15px;
     margin-bottom: 20px;
     margin-top: 10px;
 }
 .message-text .text{
+	
 	flex:0 0 90.66%;
 	max-width: 65.66%;
 }
@@ -460,7 +466,7 @@ font-size: 5px;
    }
    .skills .section-title h1{
     
-   color: cornflowerblue;
+	color: darkslategrey;
    font-size: 20px;
 
    }
@@ -513,37 +519,28 @@ font-size: 5px;
    
    .skills .skills-content .skill-box .skill-bar{
 	height:5px;
-	background: #353b48;
+	
 	position: relative;
 	padding-top: 8px;
-	/* margin-top: 10px; */
+	
 	margin: 10px 0;
 
 	box-shadow: 0 0 10px #2187e7b3;
 	border-radius: 3px;
+	
 
    }
    
    .skills .skills-content .skill-box .skill-bar .skill-bar-in {
-       background-color:#8080ff;
+       background-color: #353b48;;
        position: absolute;
 	   left:0;
 	   float: left;
        top:0;
 	   height: 100%;
-	   animation: 2s;
+	 
    }
-   @keyframes html{
-0%{
-	width: 0%;
-}
 
-	100%{
-		width:90%;
-
-	}
-
-}
 
    
    .skills .skills-content .skill-box .skill-bar .skill-bar-in span{
@@ -563,7 +560,7 @@ font-size: 5px;
     padding: 100px 7px;
    }
    .portfolio .section-title h1{
-    color: cornflowerblue;
+    color: darkslategrey;
    }
    .portfolio .section-title h1:before{
        left:30%;
@@ -694,7 +691,7 @@ font-size: 5px;
 	background-color: #f5f8fd;
 }
 .testimonials .section-title h1{
-	color: cornflowerblue;
+	color: darkslategrey;
 }
 .testimonials .section-title h1:before{
 	left:30%;

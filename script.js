@@ -50,13 +50,13 @@
  const gallery=document.querySelector(".portfolio-gallery");
  const galleryItem=gallery.querySelectorAll(".item");
  
- galleryItem.forEach(function(element){
- 	element.querySelector(".fa-plus").addEventListener("click",function(){
-     lightbox.classList.remove("hide");
-     lightbox.classList.add("show");
-     lightboxImage.src=element.querySelector("img").getAttribute("src")
- 	})
- })
+//  galleryItem.forEach(function(element){
+//  	element.querySelector(".fa-plus").addEventListener("click",function(){
+//      lightbox.classList.remove("hide");
+//      lightbox.classList.add("show");
+//      lightboxImage.src=element.querySelector("img").getAttribute("src")
+//  	})
+//  })
 
 
   // testimonial slider 
@@ -191,10 +191,9 @@
 
  // portfolio 
 
- (function(){
+ ( function(){
 
     'use strict';
-
 
     var $projects = $('.projects');
 
@@ -202,7 +201,7 @@
         itemSelector: '.item',
         layoutMode: 'fitRows'
     });
-
+ 
     $('ul.filters > li').on('click', function(e){
 
         e.preventDefault();
