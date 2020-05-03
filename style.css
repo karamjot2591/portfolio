@@ -465,8 +465,9 @@ font-size: 5px;
 
    }
    .skills .skills-content{
-       flex: 0 0 80%;
-       max-width: 80%;
+       flex: 0 0 50%;
+	   max-width: 50%;
+	
        padding-right:30px;
    }
    .skills .img{
@@ -474,7 +475,7 @@ font-size: 5px;
        max-width: 50%;
    }
    .align-items-center{
-       align-items: flex-start;
+       align-items: center;
    }
    .skills .img img{
      width: 100%;
