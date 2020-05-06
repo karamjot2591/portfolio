@@ -4,6 +4,7 @@
 
 html{
 	scroll-behavior: smooth;
+	
 }
 body{
 	margin:0;
@@ -14,6 +15,42 @@ body{
  box-sizing: border-box;
  margin:0;
 }
+
+/* cursor start here */
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2px inset white;
+    position: fixed;
+    border-radius: 4px;
+    z-index: 1;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border: 2px solid seagreen;
+    position: fixed;
+    border-radius: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+html {
+    cursor: none !important;
+}
+
+a {
+    cursor: none !important;
+}
+/* cursore end here */
 
 .container{
 	max-width: 1140px;
@@ -90,6 +127,7 @@ header.fixed{
 	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
 	animation: span 2s ease-in infinite alternate;
 }
+
 
 .letter{
     display: A ;
@@ -258,13 +296,17 @@ header .navbar ul li a.active::before{
 .timeline {
 	background-color:white;
 	padding: 15px;
+	
 }
 
 .timeline .section-title h1{
 
 	color: darkslategrey;
 	text-align: center;
-	font-size: 20px;
+
+	margin-left: 40%;
+	margin-top: 5%;
+	
 }
 .timeline .row .education
 {
@@ -338,11 +380,12 @@ font-size: 5px;
 .timeline .row .time .time-item h4{
 	
 	font-size: 15px;
+	padding-bottom: 2px;
 	
 	}
 	.timeline .row .time .time-item p{
 	
-		font-size: 10px;
+		font-size: 15px;
 		
 		}
 .timeline .row .time .time-item:last-child{
@@ -352,28 +395,33 @@ font-size: 5px;
 	}
 .timeline .row .time .time-item::before{
 	content: '';
-	width: 3px;
+	width: 2px;
 	position: absolute;
 	height: 100%;
 	left: 0;
-	background-color:rgb(190, 182, 231);
+	background-color:rgb(7, 14, 12);
 	top: 0;
 
 
 }
 .timeline .row .circle-dot{
-	content: '';
-	/* background-color:#000; */
-	display: block;
-	border: 3px solid rgb(74, 78, 90);
+	content: '';	
+	border: 3px solid darkslategrey;
+	background:whitesmoke;
 	left: 0;
 	position: absolute;
-	left: -6.4px;
+	left: -8.7px;
 	top: 2px;
-	height: 12px;
+	height: 20px;
 	
-	width: 15px;
-	border-radius:unset;
+	width: 21px;
+	border-radius :50px;
+}
+.timeline .row .circle-dot .active{
+	font-weight: 700;
+}
+.timeline .row .circle-dot .active::before{
+	background: darkslategrey;
 }
 .timeline .row .time-date{
 
@@ -425,7 +473,7 @@ font-size: 5px;
 	
 }
 .message-text .text h2{
-	font-size:25px;
+	
 	color:#ffffff;
 	font-weight: 700;
 	text-align: center;
@@ -462,31 +510,37 @@ font-size: 5px;
 .skills{
 	padding: 10px;
 	background-color: #ffffff;
+	align-content: left;
    
    }
    .skills .section-title h1{
-    
+  
 	color: darkslategrey;
-   font-size: 20px;
+	
+	margin-left: 35%;
+	margin-top: 5%;
 
    }
    .skills .skills-content{
        flex: 0 0 50%;
 	   max-width: 50%;
 	
-       padding-right:30px;
+	   padding-right: 15px;
+	   padding-left: 20px;
+	   
    }
-   .skills .img{
-       flex: 0 0 50%;
-       max-width: 50%;
-   }
+  
+  
    .align-items-center{
-       align-items: center;
+	   align-items: center;
+	   
+	   
    }
-   .skills .img img{
-     width: 100%;
+   .skills img{
+     width: 10%;
      display: block;
    }
+  
    .skills .skills-content .section-title p{
     font-size: 15px;
     font-weight: 400;
@@ -499,23 +553,25 @@ font-size: 5px;
        flex:0 0 100%;
        max-width: 100%;
 	   margin-bottom:40px;
-	  
+	   
+	
    }
    
    .skills .skills-content .skill-box h6{
-	font-size: 9px;
+	font-size: 15px;
 	font: 100;
 	color: darkslategray;
 	margin-bottom: 0px;
 	margin-inline-start: 1px;
    }
-   .skills .skills-content .skill-box img{
+   /* .skills .skills-content .skill-box img{
 	   
 	   
 	width: 50px;
 	color:darkslategray;
-	margin:1 0 2px;
-}
+	margin:1 0 1px;
+	padding:auto;
+} */
    
    .skills .skills-content .skill-box .skill-bar{
 	height:5px;
@@ -525,8 +581,9 @@ font-size: 5px;
 	
 	margin: 10px 0;
 
-	box-shadow: 0 0 10px #2187e7b3;
-	border-radius: 3px;
+	box-shadow: 0 0 9px #2187e7b3;
+	border-radius:  4px;
+	
 	
 
    }
@@ -587,7 +644,7 @@ font-size: 5px;
        padding-bottom:0px;
    }
    
-   .portfolio .filter-buttons ul li.active{
+   .portfolio .filter-buttons ul li.active {
        color:#88afe2;
        border-bottom:2px solid #85b4eb;
    }
@@ -613,6 +670,11 @@ font-size: 5px;
    .portfolio .portfolio-gallery .item .inner{
        position: relative;
    }
+   .portfolio .portfolio-gallery .item .inner:nth-child(2){
+	position: relative;
+	margin-left: 1%;
+	margin-right: 1%;
+}
 
    .portfolio .portfolio-gallery .item img{
        width: 100%;
@@ -1285,11 +1347,17 @@ footer .logo{
 	letter-spacing: 0.1em;
 	
 }
-
+footer p{
+	text-align: center;
+	color: aliceblue; 
+	text-align: center;
+	flex:0 0 100%;
+	max-width: 100%;
+}
 footer .logo span{
 	opacity: 0;
 display: inline-block;
-animation: animate 1s linear forwards;
+animation: animate 5s linear forwards;
 
 }
 
